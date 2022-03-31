@@ -106,6 +106,20 @@ public class DataStore {
         return this.entryList.get(index);
     }
 
+    public ArrayList<Integer> getAllEntryDates() {
+        ArrayList<Integer> allEntryDates = new ArrayList<>();
+
+        for (Entry entry : entryList) {
+
+            if(!allEntryDates.contains(entry.getDate())) {
+                allEntryDates.add(entry.getDate());
+            }
+            
+        }
+
+        return allEntryDates;
+    }
+
     public void addEntry(Entry entry) {
         this.entryList.add(entry);
     }
